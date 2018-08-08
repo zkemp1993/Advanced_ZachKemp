@@ -12,6 +12,8 @@ namespace Advanced_ZachKemp
         {
             bool quit = false;
             int choice;
+            //Expense expense;
+            //ExpenseManager expenseManager;
 
             do
             {
@@ -25,21 +27,52 @@ namespace Advanced_ZachKemp
                 Console.WriteLine("6. Export Data");
                 Console.WriteLine("7. Sort the data descending by the date");
                 Console.Write("Enter your choice, 0 to quit: ");
-                while (int.TryParse(Console.ReadLine(), out choice) == false)
+                while (int.TryParse(Console.ReadLine(), out choice) == false || choice < 0 || choice > 7) 
                 {
-                    Console.WriteLine("Please enter a valid number");
+                    Console.WriteLine("Incorrect Menu choice");
+                    Console.WriteLine("My Money Manager - Main Menu");
+                    Console.WriteLine("----------------------------");
+                    Console.WriteLine("1. New Expense");
+                    Console.WriteLine("2. View Expense Report");
+                    Console.WriteLine("3. Remove Expense");
+                    Console.WriteLine("4. Edit Expense");
+                    Console.WriteLine("5. Import Data");
+                    Console.WriteLine("6. Export Data");
+                    Console.WriteLine("7. Sort the data descending by the date");
+                    Console.Write("Enter your choice, 0 to quit: ");
                 }
-
+               // expense = new Expense();
+                //expenseManager = new ExpenseManager();
                 switch (choice)
                 {
-                    case 1:
 
-                    default:
+                    case 1:
+                        //expense.Expense();
+                        break;
+
+                    case 2:
+                       // expenseManager.AddExpense();
+                        break;
+                    case 3:
+                        // expenseManager.
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    case 0:
+                        quit = true;
+                        Console.WriteLine("Have a Nice Day!");
                         break;
                 }
 
 
             } while (quit == false);
+            Console.ReadKey();
         }
     }
     public class Expense
